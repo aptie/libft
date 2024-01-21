@@ -6,35 +6,12 @@
 /*   By: poude-vr <poude-vr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:36:40 by poude-vr          #+#    #+#             */
-/*   Updated: 2024/01/20 23:18:01 by poude-vr         ###   ########.fr       */
+/*   Updated: 2024/01/21 19:24:03 by poude-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-
-#include "libft.h"
-#include <stdio.h>
-
-char	*ft_substr(char const *str, unsigned int start, size_t len)
-{
-	char			*sub;
-	unsigned int	i;
-	unsigned int	end;
-
-	sub = (char *)malloc((len + 1) * sizeof(char));
-	if (!sub)
-		return (NULL);
-	i = 0;
-	end = start + (unsigned int)len;
-	while (i < len && str[start + i] != '\0')
-	{
-		sub[i] = str[start + i];
-		i++;
-	}
-	sub[i] = '\0';
-	return (sub);
-}
 
 static size_t	ft_wordcount(char const *str, char c)
 {
