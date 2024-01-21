@@ -6,7 +6,7 @@
 /*   By: poude-vr <poude-vr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:37:03 by poude-vr          #+#    #+#             */
-/*   Updated: 2024/01/16 12:19:31 by poude-vr         ###   ########.fr       */
+/*   Updated: 2024/01/21 19:06:08 by poude-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
+	char	*str1;
+	char	c1;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	while (i >= 0)
+	str1 = (char *)str;
+	c1 = (char)c
+	while (*str1 != c1)
 	{
-		if (str[i] == (char)c)
-			return ((char *)(str + i));
-		i--;
+		if (*str1 == '\0')
+		{
+			return (NULL);
+		}
+		str1++;
 	}
-	return (0);
+	return (str1);
 }
