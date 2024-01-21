@@ -6,7 +6,7 @@
 /*   By: poude-vr <poude-vr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:36:21 by poude-vr          #+#    #+#             */
-/*   Updated: 2024/01/21 19:41:34 by poude-vr         ###   ########.fr       */
+/*   Updated: 2024/01/21 19:43:08 by poude-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	int	i;
 
-	if (!dest || !src || !len)
+	if (!dest || !src)
 		return (NULL);
 	if (dest > src)
 	{
