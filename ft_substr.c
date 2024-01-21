@@ -6,7 +6,7 @@
 /*   By: poude-vr <poude-vr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:37:07 by poude-vr          #+#    #+#             */
-/*   Updated: 2024/01/21 18:55:46 by poude-vr         ###   ########.fr       */
+/*   Updated: 2024/01/21 18:57:50 by poude-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	real_len = ft_strlen(str);
 	if ((unsigned int)ft_strlen(str) < start)
 		return (ft_strdup(""));
-	if (ft_strlen < len)
-		len = ft_strlen;
+	if (real_len < len)
+		len = real_len;
 	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (!sub)
 		return (NULL);
