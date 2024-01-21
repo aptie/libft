@@ -6,7 +6,7 @@
 /*   By: poude-vr <poude-vr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:36:48 by poude-vr          #+#    #+#             */
-/*   Updated: 2024/01/16 17:26:58 by poude-vr         ###   ########.fr       */
+/*   Updated: 2024/01/21 19:37:14 by poude-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *str)
 	if (!str)
 		return (NULL);
 	new_str = (char *)malloc(sizeof(*str) * (ft_strlen(str) + 1));
-	if (!str)
+	if (!new_str)
 		return (NULL);
 	len = 0;
 	while (str[len])
