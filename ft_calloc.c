@@ -6,7 +6,7 @@
 /*   By: poude-vr <poude-vr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 12:34:54 by poude-vr          #+#    #+#             */
-/*   Updated: 2024/01/21 20:56:21 by poude-vr         ###   ########.fr       */
+/*   Updated: 2024/01/21 20:57:22 by poude-vr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	allocated = malloc(1);
 	mem_size = (nmemb * size);
-	if (mem_size == NULL)
+	if (mem_size == 0)
 	{
 		if (allocated == NULL)
 			return (NULL);
@@ -29,7 +29,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	allocated = malloc(mem_size);
 	if (allocated != NULL)
-		ft_memset(allocated, 0, tot_size);
+		ft_memset(allocated, 0, mem_size);
 	return (allocated);
 }
 
